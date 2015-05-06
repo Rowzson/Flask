@@ -1,4 +1,9 @@
 WTF_CSRF_ENABLED = True
 SECRET_KEY = 'you-will-never-guess'
 
-addnothing for test
+OPENID_PROVIDERS =[
+	{'name': 'Google', 'url':'https://www.google.com/accounts/o8/id'},
+	{'name': 'Yahoo', 'url':'https://me.yahoo.com'},
+	{'name': 'AOL','url':'http://openid.aol.com/<username>'},
+	{'name': 'Fkickr','url':'http://www.flickr.com/<username>'},
+	{'name': 'MyOPENID','url':'https://www.myopenid.com'}]
