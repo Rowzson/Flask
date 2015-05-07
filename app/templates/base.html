@@ -8,16 +8,16 @@
   </head>
   <body>
      <div>Microblog: <a href="/index">Home</a>&nbsp;<a href="login">Login</a></div>
-  <hr>
-  {% with messages = get_flashed_messages() %}
-    {% if messages %}
-       <ul>
-       {% for message in messages %}
+     <hr>
+     {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
             <li>{{ message }} </li>
-       {% endfor %}
-       </ul>
+        {% endfor %}
+        </ul>
       {% endif %}
-    {% endwith %}
-    {% block content %}{% endblock %}
+     {% endwith %}
+     {% block content %}{% endblock %}
    </body>
 </html>
