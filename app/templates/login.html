@@ -4,7 +4,9 @@
 
 {% block content %}
 <script type="text/javascript">
+function set_openid(openid, pr)
 {
+
     u = openid.search('<username>')
     if (u != -1){
        // openid requires username
