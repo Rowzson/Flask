@@ -1,4 +1,4 @@
-#!flask/bin/python
+#!/home/Rowson/.virtualenvs/myvirtualenv/bin/python
 import imp
 from migrate.versioning import api
 from app import db

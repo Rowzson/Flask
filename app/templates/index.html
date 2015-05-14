@@ -1,8 +1,14 @@
+<!-- extend base layout -->
 {% extends "base.html" %}
-{% block content %}
-    <h1>Hi, {{ user.nickname}}!</h1>
-    {% for post in posts %}
-    <div><p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
-{% endblock %}
 
+{% block content %}
+<div class="hero-unit">
+    {% if g.user.is_authenticated() %}
+    <h2>Hi, {{ user.nickname }}</h1>
+    {% else %}
+    <h2>Hi, Guest!</h1>
+    {% endif %}
+    <p> Welcome to Rowson's blog, for more information, please click the botton as below<br><br>
+    <a class="btn btn-primary btn-large" href="{{ url_for('me') }}">Hit me</a>
+
+{% endblock %}

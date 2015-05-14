@@ -1,0 +1,29 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<div style="margin-left:20px">
+    <h2>Introduction</h2>
+    <h4><p>Hi I am Rowson, this website is base on python framework called flask as backend and hosting on pythonanywhere.com</p><br>
+    <h4><p>and I am using HTML、CSS、Javascript with bootstrap as FrontEnd tool.</p></h4>
+    <h4><p>basically, beside flask, I use more framework to help me build backend, I'll show as below:</p>
+    <ul>
+        <li>flask-login</li>
+        <li>flask-openid</li>
+        <li>flask-sqlalchemy</li>
+        <li>sqlalchemy-migrate</li>
+        <li>flask-wooshalchemy</li>
+        <li>flask-wtf</li>
+    </ul>
+    <h4><p>it's just for now, for more function(such as email,posts board...etc), I will use more framework to help me to build it</p>
+    <h4>also, I am using bootstrap framework to decorate my website, although so far it looks a little poor :(</h4>
+    <h4>anyway, welcome to here , and I am looking for a job as web-developer, if you want to understand more, you can also visit</h4>
+    <ul>
+        <li><h4><a href="{{ url_for('resume') }}">Resume</a> - please check if I can work with you</li>
+        <li><h4><a href="{{ url_for('login') }}">Login</a> - not done yet, if you wish, you can login with openID and edit your nickname</li>
+    </ul>
+    <br><br>
+    <h4><p>best regards</p></h4>
+    <h4><p>Rowson</p>
+</div>
+{% endblock %}
