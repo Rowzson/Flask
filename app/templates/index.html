@@ -2,13 +2,153 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="hero-unit">
-    {% if g.user.is_authenticated() %}
-    <h2>Hi, {{ user.nickname }}</h1>
-    {% else %}
-    <h2>Hi, Guest!</h1>
-    {% endif %}
-    <p> Welcome to Rowson's blog, for more information, please click the botton as below<br><br>
-    <a class="btn btn-primary btn-large" href="{{ url_for('me') }}">Hit me</a>
+        <main>
+
+            <!-- START THE CAROUSEL -->
+            <div class="carousel slide carousel-fade" data-ride="carousel" id="myCarousel">
+                <ol class="carousel-indicators" id="movRT">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner" >
+                    <div class="item active">
+                        <img class="img-responsive" src="/static/img/_Sun.jpg"  alt="First image" width="100%"/>
+                        <div class="header-text">
+                            <div class="col-md-12 text-center">
+                                <h2>
+                            	    <span>Rowson</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/static/img/_sponge.jpg" alt="image" width="100%"/>
+                        <div class="header-text">
+                            <div class="col-md-12 text-center">
+                                <h2>
+                            	    <span>learn as sponge</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/static/img/_bee.jpg" alt="image" width="100%"/>
+                        <div class="header-text">
+                            <div class="col-md-12 text-center">
+                                <h2>
+                            	    <span>work as bee</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/static/img/_cat.jpg" alt="image" width="100%"/>
+                        <div class="header-text">
+                            <div class="col-md-12 text-center">
+                                <h2>
+                            	    <span>life as cat</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/static/img/_people.jpg" alt="image" width="100%"/>
+                        <div class="header-text">
+                            <div class="col-md-12 text-center">
+                                <h2>
+                        	    <span>choose me!</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#myCarousel" class="left carousel-control" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a href="#myCarousel" class="right carousel-control" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <!-- END THE CAROUSEL -->
+
+        <!-- Marketing messaging and featurettes -->
+            <style>
+                @media screen and (max-width: 1200px) {
+                #_center{
+                text-align:center;
+                }}
+            </style>
+            <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4" id="_center" >
+                    <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                    <h2>What was</h2>
+                    <p>Was a Quality Engineer with electrionc parts of automobile, in charge of parts like CarPC, BodyControlMoudle, Remote controler..etc electronic device, and familiar with product devlopment flow in different parts !</p>
+                    <p id="past"><a class="btn btn-default" href="#past" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4" id="_center" >
+                    <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                    <h2>What is going on</h2>
+                    <p>Right now I am goint to a career change from automobile to IT, as a starter and newbie in this area, I am going to learn fast and efficient and most important, correctly !</p>
+                    <p><a class="btn btn-default" href="#now" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4" id="_center" >
+                    <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                    <h2>What Will be</h2>
+                    <p>Start from Frontend and getting understand about Backend, and the final target is toward to a full-stack engineer  </p>
+                    <p><a class="btn btn-default" href="resume" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+        <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Graduated from NTUST <span class="text-muted">@ 2005-2009</span></h2>
+                    <p class="lead">As a student who major in electornic and computer sicence, I have the knowledge and the sense of software and hardware of computer.</p>
+            </div>
+            <div class="col-md-5 ">
+                <img class="featurette-image img-responsive center-block" src="/static/img/logo.png" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider" id="now">
+
+        <div class="row featurette">
+            <div class="col-md-7 col-md-push-5">
+                <h2 class="featurette-heading">Worked for Yulon-Motor <span class="text-muted">@2012-2015</span></h2>
+                <p class="lead">As a quality engineer, I was in charge of all the electronic parts of Luxgen, and also I designed the inspect pattern, built test platform, supplier audit, dealing with customer request and more, I've experienced with all the quality flow. It was a wonderful trip for my life！  </p>
+            </div>
+            <div class="col-md-5 col-md-pull-7">
+                <img class="featurette-image img-responsive center-block" src="/static/img/_Car.jpg" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">What's Next? <span class="text-muted">@2015 - ? </span></h2>
+                <p class="lead">I am using python framework called flask and PAW to build this website and using HTML5, CSS , javascript(the most is bootstrap, a fantastic framework) as a start, I am reading the spec and keep to practice the languages and systems. </p>
+                <p class="lead">If you are interesting, please<mark><a href="resume">Hit me</a></mark>for the details.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive center-block" src="/static/img/_F2E.png" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <!-- END THE FEATURETTES -->
+
+        </main>
 
 {% endblock %}

@@ -37,9 +37,13 @@ def index():
         }
     ]
     return render_template('index.html',
-                           title='Home',
+                           title='intro',
                            user=user,
                            posts=posts)
+
+@app.route('/home')
+def home():
+    return render_template('home.html', title='Home')
 
 @app.route('/me')
 def me():
@@ -123,3 +127,7 @@ def edit():
         form.nickname.data = g.user.nickname
         form.about_me.data = g.user.about_me
     return render_template('edit.html', form=form)
+
+@app.route('/test')
+def test():
+    return render_template('test.html', title='Test')
